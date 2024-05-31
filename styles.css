@@ -87,7 +87,6 @@ body{
 h1, h2, h3, h4 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  color: var(--color-text-primary);
   font-weight: 400;
   line-height: normal;
 }
