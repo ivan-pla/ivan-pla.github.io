@@ -278,7 +278,7 @@ a {
   position: sticky;
   top: var(--header-height);
   z-index: 2;
-  background-color: linear-gradient(180deg, color-mix(in srgb, var(--color-bg-primary) 100%, transparent) 50%, color-mix(in srgb, var(--color-bg-primary) 80%, transparent) 50%);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--color-bg-primary) 100%, transparent) 50%, color-mix(in srgb, var(--color-bg-primary) 80%, transparent) 50%);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
 
@@ -581,8 +581,8 @@ header {
   max-width: fit-content;
   aspect-ratio: 420/290;
   background-color: var(--color-border-1);
-  border: 6px solid var(--color-border-1);
-  border-radius: 4px;
+  border: 8px solid var(--color-border-1);
+  border-radius: 8px;
 
   &:after {
     content: '';
@@ -611,8 +611,8 @@ header {
   max-width: fit-content;
   aspect-ratio: 393/852;
   background-color: var(--color-border-1);
-  border: 6px solid var(--color-border-1);
-  border-radius: 22px;
+  border: 8px solid var(--color-border-1);
+  border-radius: 25px;
 
   &:after {
     content: '';
@@ -622,7 +622,7 @@ header {
     left: -8px;
     bottom: -8px;
     border: 2px solid var(--color-border-2);
-    border-radius: 28px;
+    border-radius: 25px;
     box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
   }
 
