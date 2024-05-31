@@ -10,9 +10,9 @@
   --color-gradient-1: rgba(0,162,198,1);
   --color-gradient-2: rgba(190,67,251,1);
   --color-gradient-3: rgba(243,76,86,1);
-  --color-bg-primary: light-dark(#ffffff,#1f1f1f);
-  --color-bg-secondary: light-dark(#F9FBFC,#24262C);
-  --color-text-primary: light-dark(#394C77,#f2f2f2);
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #F9FBFC;
+  --color-text-primary: #394C77;
   --color-link-primary: var(--color-gradient-2);
 
   /* GRADIENTS */
@@ -27,6 +27,12 @@
   @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;
   }
+
+  @media (prefers-color-scheme: dark) {
+    --color-bg-primary: #1f1f1f;
+    --color-bg-secondary: #24262C;
+    --color-text-primary: #f2f2f2;
+    }
 
 }
 
@@ -557,9 +563,14 @@ header {
 /* IMAGE FRAMES */
 
 [class^="frame-"] {
-  color-scheme: light dark;
-  --color-border-1: light-dark(#eee,#24262C);
-  --color-border-2: light-dark(#fafafa,#1f1f1f);
+  --color-border-1: #eee;
+  --color-border-2: #fafafa;
+
+  @media (prefers-color-scheme: dark) {
+    --color-border-1: #24262C;
+    --color-border-2: #1f1f1f;
+      }
+
 }
 
 
