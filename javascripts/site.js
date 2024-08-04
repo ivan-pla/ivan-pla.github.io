@@ -1,12 +1,23 @@
-const stickyElements = document.querySelectorAll('.sticky-bar');
 
-const onScroll = () => {
-  stickyElements.forEach((sticky) => {
-    if (sticky) {
-    const elementCSSTop = parseInt(window.getComputedStyle(sticky, null).getPropertyValue('top'));
-    sticky.classList.toggle('is-pinned', sticky.getBoundingClientRect().top == elementCSSTop);
+var newElement = document.createElement("div");
+newElement.classList.add("myObserver");
+var stickyElement = document.querySelector(".sticky-bar");
+
+
+insertBefore(newElement, stickyElement);
+function insertBefore(el, referenceNode) {
+  referenceNode.parentNode.insertBefore(el, referenceNode);
+}
+  
+var observer = new IntersectionObserver(
+  function (entries) {
+    if (entries[0].intersectionRatio === 0) {
+      stickyElement.classList.add("is-pinned");
+    } else if (entries[0].intersectionRatio === 1) {
+      stickyElement.classList.remove("is-pinned");
     }
-  });
-};
+  },
+  { threshold: [0, 1] }
+);
 
-window.addEventListener('scroll', onScroll);
+observer.observe(newElement);
