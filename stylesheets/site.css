@@ -275,7 +275,9 @@
 /* INITIAL SETUP */
 :focus, :focus-visible {
   outline: 3px solid var(--color-link-primary);
-  outline-offset: 3px; }
+  outline-offset: 3px;
+  border-radius: var(--border-radius);
+  border-bottom: none; }
 
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
